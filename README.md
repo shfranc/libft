@@ -2,6 +2,6 @@
 Personal library of C functions
 
 ## Usage
-> git clone <br/>
-Create the library with "<i>make</i>" <br/>
-Compile with libft.a
+> git clone https://github.com/shfranc/libft.git libft<br/>
+create the library with "<i>make</i>" <br/>
+compile with gcc 'source' libft.a
