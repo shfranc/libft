@@ -6,7 +6,7 @@
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/10 10:45:33 by exam              #+#    #+#             */
-/*   Updated: 2017/01/11 16:34:27 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/01/11 16:38:19 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char			*ft_itoa_base(int value, int base)
 	char		*tab_base;
 
 	if (base <= 1 || base >= 17)
-		return (0);
+		return (NULL);
 	tab_base = ft_strdup("0123456789ABCDEF");
 	size = value_size(value, base);
 	if (!(result = ft_strnew(size)))
