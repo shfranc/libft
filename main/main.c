@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main_libft.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 18:47:01 by sfranc            #+#    #+#             */
-/*   Updated: 2016/11/24 22:00:31 by sfranc           ###   ########.fr       */
+/*   Created: 2016/11/24 21:41:35 by sfranc            #+#    #+#             */
+/*   Updated: 2016/11/24 22:11:20 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,43 @@
 #define BOLDBLUE "\033[1m\033[34m"      /* Bold Blue */
 #define MAGENTA "\033[35m"      /* Magenta */
 
-char	ft_toupper4(char c);
-char	ft_toupper5(unsigned int i, char c);
-t_list	*ft_lstmap_test(t_list *lst);
+void	ft_toupper2(char *c)
+{
+	if (*c >= 'a' && *c <= 'z')
+		*c = *c - 32;
+}
+
+void	ft_toupper3(unsigned int i, char *c)
+{
+	if (i % 2 == 0)
+	{
+		if (*c >= 'a' && *c <= 'z')
+			*c = *c - 32;
+	}
+}
+
+char	ft_toupper4(char c)
+{
+	if (c == 'T')
+		c = 't';
+	return(c);
+}
+
+char	ft_toupper5(unsigned int i, char c)
+{
+	if (i % 2 == 0)
+	{
+		if (c == 'T')
+			c = 't';
+	}
+	return (c);
+}
+
+t_list	*ft_lstmap_test(t_list *list)
+{
+	list->content = ft_strjoin(list->content, "PASSAGE");
+	return (list);
+}
 
 int		main(void)
 {
@@ -59,62 +93,62 @@ int		main(void)
 	elem3 = NULL;
 	elem4 = NULL;
 
-// FT MEMSET ===================================================================
- // 	printf(BOLDBLUE "======== ft_memset ===========================================\n" RESET);
-	// src = ft_strdup("AaaaaAaaaaAaaaa");
-	// c = 'b';
-	// printf(MAGENTA "\nTest char + len inf ou =\n" RESET);
-	// printf("%s\n", src);
-	// len = 5;
-	// printf("     moi : %s\n", ft_memset(src, c, len));
-	// src = ft_strdup("AaaaaAaaaaAaaaa");
-	// printf("la vraie : %s\n", memset(src, c, len));
-	// src = ft_strdup("AaaaaAaaaaAaaaa");
+// // FT MEMSET ===================================================================
+ 	printf(BOLDBLUE "======== ft_memset ===========================================\n" RESET);
+	src = ft_strdup("AaaaaAaaaaAaaaa");
+	c = 'b';
+	printf(MAGENTA "\nTest char + len inf ou =\n" RESET);
+	printf("%s\n", src);
+	len = 5;
+	printf("     moi : %s\n", ft_memset(src, c, len));
+	src = ft_strdup("AaaaaAaaaaAaaaa");
+	printf("la vraie : %s\n", memset(src, c, len));
+	src = ft_strdup("AaaaaAaaaaAaaaa");
 
-	// printf(MAGENTA "\nTest char + len sup\n"RESET);
-	// len = 15;
+	printf(MAGENTA "\nTest char + len sup\n"RESET);
+	len = 15;
 	
-	// printf("%s\n", src);
-	// printf("     moi : %s\n", ft_memset(src, c, len));
-	// src = ft_strdup("AaaaaAaaaaAaaaa");
-	// printf("la vraie : %s\n", memset(src, c, len));
-	// src = ft_strdup("AaaaaAaaaaAaaaa");	
+	printf("%s\n", src);
+	printf("     moi : %s\n", ft_memset(src, c, len));
+	src = ft_strdup("AaaaaAaaaaAaaaa");
+	printf("la vraie : %s\n", memset(src, c, len));
+	src = ft_strdup("AaaaaAaaaaAaaaa");	
 
-	// printf(MAGENTA "\nTest char + c vide\n" RESET);
-	// c = 0;
-	// printf("%s\n", src);
-	// printf("     moi : %s\n", ft_memset(src, c, len));
-	// src = ft_strdup("AaaaaAaaaaAaaaa");
-	// printf("la vraie : %s\n", memset(src, c, len));
-	// src = ft_strdup("AaaaaAaaaaAaaaa");
+	printf(MAGENTA "\nTest char + c vide\n" RESET);
+	c = 0;
+	printf("%s\n", src);
+	printf("     moi : %s\n", ft_memset(src, c, len));
+	src = ft_strdup("AaaaaAaaaaAaaaa");
+	printf("la vraie : %s\n", memset(src, c, len));
+	src = ft_strdup("AaaaaAaaaaAaaaa");
 
-	// printf(MAGENTA "\nTest int\n" RESET);
-	// c = 0;
-	// len = 16;
-	// i = 0;
-	// tab_int1 = ft_range(1, 5);
-	// while (i < 4)
-	// {
-	// 	printf("%d", tab_int1[i]);
-	// 	i++;
-	// }
-	// printf("\n     moi :\n");
-	// ft_memset(tab_int1, c, len);
-	// i = 0;
-	// while (i < 4)
-	// {
-	// 	printf("%d\n", tab_int1[i]);
-	// 	i++;
-	// }
-	// printf("\nla vraie :\n");
-	// tab_int2 = ft_range(1, 5);
-	// memset(tab_int2, c, len);
-	// i = 0;
-	// while (i < 4)
-	// {
-	// 	printf("%d\n", tab_int2[i]);
-	// 	i++;
-	// }
+	printf(MAGENTA "\nTest int\n" RESET);
+	c = 0;
+	len = 16;
+	i = 0;
+	tab_int1 = ft_range(1, 5);
+	while (i < 4)
+	{
+		printf("%d", tab_int1[i]);
+		i++;
+	}
+	printf("\n     moi :\n");
+	ft_memset(tab_int1, c, len);
+	i = 0;
+	while (i < 4)
+	{
+		printf("%d\n", tab_int1[i]);
+		i++;
+	}
+	printf("\nla vraie :\n");
+	tab_int2 = ft_range(1, 5);
+	memset(tab_int2, c, len);
+	i = 0;
+	while (i < 4)
+	{
+		printf("%d\n", tab_int2[i]);
+		i++;
+	}
 	
 // // FT BZERO ====================================================================
 // 	printf(BOLDBLUE "======== ft_bzero ============================================\n" RESET);
@@ -293,97 +327,85 @@ int		main(void)
 // 	printf("     moi : %s\n", ft_memccpy(dst, src, c, len));
 
 // // FT MEMMOVE ==================================================================
-	printf(BOLDBLUE "======== ft_memmove ==========================================\n" RESET);
+// 	printf(BOLDBLUE "======== ft_memmove ==========================================\n" RESET);
 
-	// printf(MAGENTA "\nTest char EASY\n" RESET);
-	// src = ft_strdup("Hello World !");
-	// printf("src = %s\n", src);
-	// len = ft_strlen(src);
-	// dst = ft_strdup("1233456789101");
-	// printf("dst = %s\n", dst);
-	// dst = memmove(dst, src, len);
-	// printf("la vraie : %s\n", dst);
-	// dst = ft_strdup("1233456789101");
-	// dst = ft_memmove(dst, src, len);
-	// printf("     moi : %s\n", dst);
+// 	printf(MAGENTA "\nTest char EASY\n" RESET);
+// 	src = ft_strdup("Hello World !");
+// 	printf("src = %s\n", src);
+// 	len = ft_strlen(src);
+// 	dst = ft_strdup("1233456789101");
+// 	printf("dst = %s\n", dst);
+// 	dst = memmove(dst, src, len);
+// 	printf("la vraie : %s\n", dst);
+// 	dst = ft_strdup("1233456789101");
+// 	dst = ft_memmove(dst, src, len);
+// 	printf("     moi : %s\n", dst);
 	
-	// printf(MAGENTA "\nTest char dst plus longue\n" RESET);
-	// src = ft_strdup("Hello World !");
-	// printf("src = %s\n", src);
-	// len = ft_strlen(src);
-	// dst = ft_strdup("chaine non vide chaine non vide");
-	// printf("dst = %s\n", dst);
-	// dst = memmove(dst, src, len);
-	// printf("la vraie : %s\n", dst);
-	// dst = ft_strdup("chaine non vide chaine non vide");
-	// dst = ft_memmove(dst, src, len);
-	// printf("     moi : %s\n", dst);
+// 	printf(MAGENTA "\nTest char dst plus longue\n" RESET);
+// 	src = ft_strdup("Hello World !");
+// 	printf("src = %s\n", src);
+// 	len = ft_strlen(src);
+// 	dst = ft_strdup("chaine non vide chaine non vide");
+// 	printf("dst = %s\n", dst);
+// 	dst = memmove(dst, src, len);
+// 	printf("la vraie : %s\n", dst);
+// 	dst = ft_strdup("chaine non vide chaine non vide");
+// 	dst = ft_memmove(dst, src, len);
+// 	printf("     moi : %s\n", dst);
 
-	printf(MAGENTA "\nTest char dst plus petite\n" RESET);
-	src = ft_strdup("Hello World !");
-	printf("src = %s\n", src);
-	len = ft_strlen(src);
-	dst = ft_strdup("petite");
-	printf("dst = %s\n", dst);
-	dst = memmove(dst, src, len);
-	printf("la vraie : %s\n", dst);
-	dst = ft_strdup("petite");
-	dst = ft_memmove(dst, src, len);
-	printf("     moi : %s\n", dst);
+// 	printf(MAGENTA "\nTest char src vide mais pas dst\n" RESET);
+// 	src = ft_strdup("");
+// 	printf("src = %s\n", src);
+// 	len = ft_strlen(src);
+// 	dst = ft_strdup("chaine non vide chaine non vide");
+// 	printf("dst = %s\n", dst);
+// 	dst = memmove(dst, src, len);
+// 	printf("la vraie : %s\n", dst);
+// 	dst = ft_strdup("chaine non vide chaine non vide");
+// 	dst = ft_memmove(dst, src, len);
+// 	printf("     moi : %s\n", dst);
 
-	// printf(MAGENTA "\nTest char src vide mais pas dst\n" RESET);
-	// src = ft_strdup("");
-	// printf("src = %s\n", src);
-	// len = ft_strlen(src);
-	// dst = ft_strdup("chaine non vide chaine non vide");
-	// printf("dst = %s\n", dst);
-	// dst = memmove(dst, src, len);
-	// printf("la vraie : %s\n", dst);
-	// dst = ft_strdup("chaine non vide chaine non vide");
-	// dst = ft_memmove(dst, src, len);
-	// printf("     moi : %s\n", dst);
+// 	printf(MAGENTA "\nTest char len >\n" RESET);
+// 	src = ft_strdup("Hello World !");
+// 	printf("src = %s\n", src);
+// 	len = ft_strlen(src) + 10;
+// 	dst = ft_strdup("1233456789101");
+// 	printf("dst = %s\n", dst);
+// 	dst = memmove(dst, src, len);
+// 	printf("la vraie : %s\n", dst);
+// 	dst = ft_strdup("1233456789101");
+// 	dst = ft_memmove(dst, src, len);
+// 	printf("     moi : %s\n", dst);
 
-	// printf(MAGENTA "\nTest char len >\n" RESET);
-	// src = ft_strdup("Hello World !");
-	// printf("src = %s\n", src);
-	// len = ft_strlen(src) + 10;
-	// dst = ft_strdup("1233456789101");
-	// printf("dst = %s\n", dst);
-	// dst = memmove(dst, src, len);
-	// printf("la vraie : %s\n", dst);
-	// dst = ft_strdup("1233456789101");
-	// dst = ft_memmove(dst, src, len);
-	// printf("     moi : %s\n", dst);
+// 	printf(MAGENTA "\nTest char OVERLAP\n" RESET);
+// 	src = ft_strdup("Hello World !");
+// 	printf("src = %s\n", src);
+// 	len = ft_strlen(src) + 10;
+// 	dst = src + 3;
+// 	printf("dst = %s\n", dst);
 
-	// printf(MAGENTA "\nTest char OVERLAP\n" RESET);
-	// src = ft_strdup("Hello World !");
-	// printf("src = %s\n", src);
-	// len = ft_strlen(src) + 10;
-	// dst = src + 3;
-	// printf("dst = %s\n", dst);
+// 	dst = memmove(dst, src, len);
+// 	printf("la vraie : %s\n", dst);
 
-	// dst = memmove(dst, src, len);
-	// printf("la vraie : %s\n", dst);
+// 	src = ft_strdup("Hello World !");
+// 	dst = src + 3;
+// 	dst = ft_memmove(dst, src, len);
+// 	printf("     moi : %s\n", dst);
 
-	// src = ft_strdup("Hello World !");
-	// dst = src + 3;
-	// dst = ft_memmove(dst, src, len);
-	// printf("     moi : %s\n", dst);
+// 	printf(MAGENTA "\nTest char OVERLAP\n" RESET);
+// 	src = ft_strdup("Hello World !");
+// 	printf("src = %s\n", src);
+// 	len = ft_strlen(src) + 10;
+// 	dst = src - 3;
+// 	printf("dst = %s\n", dst);
 
-	// printf(MAGENTA "\nTest char OVERLAP\n" RESET);
-	// src = ft_strdup("Hello World !");
-	// printf("src = %s\n", src);
-	// len = ft_strlen(src) + 10;
-	// dst = src - 3;
-	// printf("dst = %s\n", dst);
+// 	dst = memmove(dst, src, len);
+// 	printf("la vraie : %s\n", dst);
 
-	// dst = memmove(dst, src, len);
-	// printf("la vraie : %s\n", dst);
-
-	// src = ft_strdup("Hello World !");
-	// dst = src - 3;
-	// dst = ft_memmove(dst, src, len);
-	// printf("     moi : %s\n", dst);
+// 	src = ft_strdup("Hello World !");
+// 	dst = src - 3;
+// 	dst = ft_memmove(dst, src, len);
+// 	printf("     moi : %s\n", dst);
 
 // // FT MEMCHR ===================================================================
 // 	printf(BOLDBLUE "======== ft_memchr ===========================================\n" RESET);
