@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2017/01/11 13:42:46 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/01/11 16:14:07 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ void			ft_lstprint(t_list *list);
 */
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
+char			*ft_itoa_base(int value, int base);
 
 /*
 ** Fonctions sur des int

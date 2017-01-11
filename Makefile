@@ -6,7 +6,7 @@
 #    By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 16:47:23 by sfranc            #+#    #+#              #
-#    Updated: 2017/01/11 14:09:54 by sfranc           ###   ########.fr        #
+#    Updated: 2017/01/11 16:14:41 by sfranc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_atoi.c \
 		ft_isdigit.c \
 		ft_isprint.c \
 		ft_itoa.c \
+		ft_itoa_base.c \
 		ft_lstadd.c \
 		ft_lstadd_last.c \
 		ft_lstdel.c \
