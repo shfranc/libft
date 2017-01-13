@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2017/01/11 16:14:07 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/01/13 19:33:21 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,5 +122,6 @@ char			*ft_itoa_base(int value, int base);
 */
 int				*ft_range(int min, int max);
 int				ft_intsize(int n);
+void			sort_int_tab(int *tab, unsigned int size);
 
 #endif
