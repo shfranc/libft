@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2017/03/23 11:50:40 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/03/31 17:25:57 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int				ft_tolower(int c);
 /*
 ** Fonctions sur des chaines de caracteres
 */
+void			ft_charswap(char **a, char **b);
 size_t			ft_strlen(const char *s);
 char			*ft_strdup(const char *s1);
 char			*ft_strcpy(char *dst, const char *src);
@@ -62,6 +63,7 @@ char			*ft_strnstr(const char *big, const char *little, size_t len);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnew(size_t size);
+char			*ft_strnew_set(size_t size, char c);
 void			ft_strdel(char **as);
 void			ft_strclr(char *s);
 void			ft_striter(char *s, void(*f)(char*));
