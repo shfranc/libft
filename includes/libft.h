@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2017/03/31 17:25:57 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/04/19 16:22:41 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include "get_next_line.h"
 
 /*
 ** Fonctions sur la memoire
@@ -80,6 +81,12 @@ char			**ft_strsplit(char const *s, char c);
 int				ft_nb_words(char const *s, char c);
 
 /*
+** Fontions sur des tableaux de char
+*/
+void			ft_puttab(char **tab);
+void			ft_freetab(char ***tab);
+
+/*
 ** Fonctions d'affichage
 */
 void			ft_putchar(char c);
@@ -128,5 +135,10 @@ int				*ft_range(int min, int max);
 int				ft_intsize(int n);
 void			sort_int_tab(int *tab, unsigned int size);
 int				ull_len(unsigned long long nb);
+
+/*
+** Gestion d'erreur
+*/
+void	ft_exit(char *error, int status);
 
 #endif

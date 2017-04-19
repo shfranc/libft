@@ -6,7 +6,7 @@
 #    By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 16:47:23 by sfranc            #+#    #+#              #
-#    Updated: 2017/03/31 17:26:19 by sfranc           ###   ########.fr        #
+#    Updated: 2017/04/19 16:23:01 by sfranc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_atoi.c \
 		ft_bzero.c \
 		ft_charswap.c \
 		ft_del.c \
+		ft_exit.c \
+		ft_freetab.c \
 		ft_intsize.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
@@ -53,6 +55,7 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_atoi.c \
 		ft_putnbr_fd.c \
 		ft_putstr.c \
 		ft_putstr_fd.c \
+		ft_puttab.c \
 		ft_range.c \
 		ft_strcat.c \
 		ft_strchr.c \
@@ -84,6 +87,7 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_atoi.c \
 		ft_strtrim.c \
 		ft_tolower.c \
 		ft_toupper.c \
+		get_next_line.c \
 		printbit.c \
 		sort_int_tab.c \
 		ull_len.c \
