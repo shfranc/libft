@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printbit.c                                         :+:      :+:    :+:   */
+/*   ft_isnumber.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfranc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/20 14:32:51 by sfranc            #+#    #+#             */
-/*   Updated: 2017/04/20 10:28:38 by sfranc           ###   ########.fr       */
+/*   Created: 2017/04/20 15:15:16 by sfranc            #+#    #+#             */
+/*   Updated: 2017/04/20 15:22:13 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	printbit(int nb)
+int		ft_isnumber(char *s)
 {
-	unsigned int	mask;
-
-	mask = (1 << 31);
-	while (mask)
+	while (*s)
 	{
-		if (nb & mask)
-			write(1, "1", 1);
-		else
-			write(1, "0", 1);
-		mask >>= 1;
+		if (!ft_isdigit(*s))
+			return (0);
+		s++;
 	}
-	write(1, "\n", 1);
+	return (1);
 }

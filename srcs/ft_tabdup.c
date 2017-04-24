@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printbit.c                                         :+:      :+:    :+:   */
+/*   ft_tabdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfranc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/20 14:32:51 by sfranc            #+#    #+#             */
-/*   Updated: 2017/04/20 10:28:38 by sfranc           ###   ########.fr       */
+/*   Created: 2017/04/24 17:42:16 by sfranc            #+#    #+#             */
+/*   Updated: 2017/04/24 17:43:39 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	printbit(int nb)
+char	**ft_tabdup(char **tab)
 {
-	unsigned int	mask;
+	char	**cpy;
+	int		len;
+	int		i;
 
-	mask = (1 << 31);
-	while (mask)
+	len = ft_tablen(tab);
+	if (!(cpy = (char**)malloc(sizeof(char*) * (len + 1))))
+		return (NULL);
+	*(cpy + len) = 0;
+	i = 0;
+	while (i < len)
 	{
-		if (nb & mask)
-			write(1, "1", 1);
-		else
-			write(1, "0", 1);
-		mask >>= 1;
+		*(cpy + i) = ft_strdup(*(tab + i));
+		i++;
 	}
-	write(1, "\n", 1);
+	return (cpy);
 }

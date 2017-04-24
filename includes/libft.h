@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2017/04/19 16:22:41 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/04/24 17:45:35 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,12 +79,15 @@ char			*ft_strjoin3(char *s1, char *s2, char *s3);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
 int				ft_nb_words(char const *s, char c);
+int				ft_isnumber(char *s);
 
 /*
 ** Fontions sur des tableaux de char
 */
+char			**ft_tabdup(char **tab);
 void			ft_puttab(char **tab);
 void			ft_freetab(char ***tab);
+int				ft_tablen(char **tab);
 
 /*
 ** Fonctions d'affichage

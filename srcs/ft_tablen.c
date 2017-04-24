@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printbit.c                                         :+:      :+:    :+:   */
+/*   ft_tablen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfranc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/20 14:32:51 by sfranc            #+#    #+#             */
-/*   Updated: 2017/04/20 10:28:38 by sfranc           ###   ########.fr       */
+/*   Created: 2017/04/21 12:39:47 by sfranc            #+#    #+#             */
+/*   Updated: 2017/04/21 14:36:26 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	printbit(int nb)
+int		ft_tablen(char **tab)
 {
-	unsigned int	mask;
+	int		len;
 
-	mask = (1 << 31);
-	while (mask)
-	{
-		if (nb & mask)
-			write(1, "1", 1);
-		else
-			write(1, "0", 1);
-		mask >>= 1;
-	}
-	write(1, "\n", 1);
+	len = 0;
+	while (*(tab + len))
+		len++;
+	return (len);
 }
