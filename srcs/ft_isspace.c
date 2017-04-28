@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabdup.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfranc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/24 17:42:16 by sfranc            #+#    #+#             */
-/*   Updated: 2017/04/25 10:29:21 by sfranc           ###   ########.fr       */
+/*   Created: 2017/04/25 11:11:59 by sfranc            #+#    #+#             */
+/*   Updated: 2017/04/25 11:13:08 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_tabdup(char **tab)
+int		ft_isspace(int c)
 {
-	char	**cpy;
-	int		len;
-	int		i;
-
-	len = ft_tablen(tab);
-	if (!(cpy = (char**)malloc(sizeof(char*) * (len + 1))))
-		return (NULL);
-	*(cpy + len) = 0;
-	i = 0;
-	while (i < len)
-	{
-		*(cpy + i) = ft_strdup(*(tab + i));
-		i++;
-	}
-	return (cpy);
+	if (c == ' ' || c == '\t' || c == '\n')
+		return (1);
+	else
+		return (0);
 }

@@ -6,7 +6,7 @@
 #    By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 16:47:23 by sfranc            #+#    #+#              #
-#    Updated: 2017/04/24 17:45:18 by sfranc           ###   ########.fr        #
+#    Updated: 2017/04/26 14:59:46 by sfranc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = libft.a
 PATH_SRCS = srcs
 PATH_OBJS = objs
 INCLUDES = includes
-SRCS = 	$(addprefix $(PATH_SRCS)/, ft_atoi.c \
+SRCS = 	$(addprefix $(PATH_SRCS)/, ft_addtotab.c \
+		ft_atoi.c \
 		ft_bzero.c \
 		ft_charswap.c \
 		ft_del.c \
@@ -27,6 +28,7 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_atoi.c \
 		ft_isascii.c \
 		ft_isdigit.c \
 		ft_isprint.c \
+		ft_isspace.c \
 		ft_itoa.c \
 		ft_itoa_base.c \
 		ft_lstadd.c \

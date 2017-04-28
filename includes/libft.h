@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2017/04/24 17:45:35 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/04/26 14:59:27 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int				ft_isascii(int c);
 int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
+int				ft_isspace(int c);
 
 /*
 ** Fonctions sur des chaines de caracteres
@@ -88,6 +89,7 @@ char			**ft_tabdup(char **tab);
 void			ft_puttab(char **tab);
 void			ft_freetab(char ***tab);
 int				ft_tablen(char **tab);
+void			ft_addtotab(char ***tab, char *add);
 
 /*
 ** Fonctions d'affichage
