@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 18:18:54 by sfranc            #+#    #+#             */
-/*   Updated: 2016/12/06 16:46:35 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/05/03 14:05:12 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_itoa(int n)
 
 	size = ft_intsize(n);
 	if (!(s = (char*)malloc(sizeof(char) * (size + 1))))
-		return (NULL);
+		ft_exit("Unable to malloc", 1);
 	*(s + size) = '\0';
 	nb = (long int)n;
 	if (nb == 0)

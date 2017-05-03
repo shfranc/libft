@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:03:07 by sfranc            #+#    #+#             */
-/*   Updated: 2016/12/06 16:46:56 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/05/03 14:07:46 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int		*ft_range(int min, int max)
 
 	if (max <= min)
 		return (0);
-	range = (int*)malloc(sizeof(int*) * (max - min + 1));
+	if (!(range = (int*)malloc(sizeof(int*) * (max - min + 1))))
+		ft_exit("Unable to malloc", 1);
 	i = 0;
 	while (i < (max - min))
 	{

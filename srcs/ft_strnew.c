@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 18:02:27 by sfranc            #+#    #+#             */
-/*   Updated: 2016/12/06 16:56:13 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/05/03 12:56:59 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strnew(size_t size)
 	char	*str;
 
 	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-		return (NULL);
+		ft_exit("Unable to malloc", 1);
 	ft_bzero(str, size + 1);
 	return (str);
 }

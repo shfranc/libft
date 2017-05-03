@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2017/05/02 10:15:03 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/05/03 15:10:24 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,6 +145,6 @@ int				ull_len(unsigned long long nb);
 /*
 ** Gestion d'erreur
 */
-void	ft_exit(char *error, int status);
+void			ft_exit(char *error, int status);
 
 #endif

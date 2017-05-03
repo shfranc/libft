@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tabdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfranc <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/24 17:42:16 by sfranc            #+#    #+#             */
-/*   Updated: 2017/04/25 10:29:21 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/05/03 12:55:01 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	**ft_tabdup(char **tab)
 
 	len = ft_tablen(tab);
 	if (!(cpy = (char**)malloc(sizeof(char*) * (len + 1))))
-		return (NULL);
+		ft_exit("Unable to malloc", 1);
 	*(cpy + len) = 0;
 	i = 0;
 	while (i < len)

@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 10:06:25 by sfranc            #+#    #+#             */
-/*   Updated: 2016/12/06 16:55:46 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/05/03 14:08:12 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ char	*ft_strcpy(char *dst, const char *src)
 
 	temp = dst;
 	while (*src)
-	{
 		*temp++ = *src++;
-	}
 	*temp = '\0';
 	return (dst);
 }

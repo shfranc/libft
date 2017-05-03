@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 20:41:46 by sfranc            #+#    #+#             */
-/*   Updated: 2016/12/06 16:46:53 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/05/03 14:07:06 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,5 @@
 void	ft_putstr(char const *str)
 {
 	if (str)
-	{
 		write(1, str, ft_strlen(str));
-	}
 }

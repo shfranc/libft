@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 11:24:34 by sfranc            #+#    #+#             */
-/*   Updated: 2016/12/06 16:56:09 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/05/03 12:56:27 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char		**ft_strsplit(char const *s, char c)
 		return (NULL);
 	n = ft_nb_words(s, c);
 	if (!(tab = (char**)malloc(sizeof(char*) * (n + 1))))
-		return (NULL);
+		ft_exit("Unable to malloc", 1);
 	i = 0;
 	*(tab + n) = 0;
 	while (i < n)

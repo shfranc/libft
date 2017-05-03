@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 12:08:57 by sfranc            #+#    #+#             */
-/*   Updated: 2016/12/06 16:55:38 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/05/03 14:09:40 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*new_s;
 	int		i;
 
-	if (!s || !(new_s = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
+	if (!s)
 		return (NULL);
+	if (!(new_s = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
+		ft_exit("Unable to malloc", 1);
 	i = 0;
 	while (*s)
 		*(new_s + i++) = f(*s++);
