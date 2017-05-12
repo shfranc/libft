@@ -6,7 +6,7 @@
 #    By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 16:47:23 by sfranc            #+#    #+#              #
-#    Updated: 2017/04/26 14:59:46 by sfranc           ###   ########.fr        #
+#    Updated: 2017/05/12 11:25:08 by sfranc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,6 +88,7 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_addtotab.c \
 		ft_strstr.c \
 		ft_strsub.c \
 		ft_strtrim.c \
+		ft_supprtotab.c \
 		ft_tablen.c \
 		ft_tabdup.c \
 		ft_tolower.c \
