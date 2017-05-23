@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_libft.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/24 21:41:35 by sfranc            #+#    #+#             */
-/*   Updated: 2016/11/24 22:11:20 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/05/22 12:33:32 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 #include <stdio.h>
 #include <ctype.h>
 #include <fcntl.h>
 
 #define RESET "\033[0m"
 #define BOLDBLUE "\033[1m\033[34m"      /* Bold Blue */
-#define MAGENTA "\033[35m"      /* Magenta */
+// #define MAGENTA "\033[35m"      /* Magenta */
 
 void	ft_toupper2(char *c)
 {
@@ -548,105 +548,105 @@ int		main(void)
 // FT ATOI ===================================================================
 	printf(BOLDBLUE "======== ft_atoi ===========================================\n" RESET);
 
-	// src = ft_strdup(" 123NHOK");
-	// i = 0;
-	// while (i <= 32)
-	// {
-	// 	src[0] = i;
-	// 	printf("%d", i);
-	// 	printf("  |  la vraie : %d", atoi(src));
-	// 	printf("  | moi : %d\n", ft_atoi(src));
-	// 	i++;
-	// }
-	// src[0] = 128;
-	// printf("%d", i);
-	// printf("  |  la vraie : %d", atoi(src));
-	// printf("  | moi : %d\n", ft_atoi(src));
+	src = ft_strdup(" 123NHOK");
+	i = 0;
+	while (i <= 32)
+	{
+		src[0] = i;
+		printf("%d", i);
+		printf("  |  la vraie : %d", atoi(src));
+		printf("  | moi : %d\n", ft_atoi(src));
+		i++;
+	}
+	src[0] = 128;
+	printf("%d", i);
+	printf("  |  la vraie : %d", atoi(src));
+	printf("  | moi : %d\n", ft_atoi(src));
 
-	// printf(MAGENTA "\nTest vide\n" RESET);
-	// printf("la vraie : %d\n", atoi(""));
-	// printf("     moi : %d\n", ft_atoi(""));
+	printf(MAGENTA "\nTest vide\n" RESET);
+	printf("la vraie : %d\n", atoi(""));
+	printf("     moi : %d\n", ft_atoi(""));
 
 	printf(MAGENTA "\nTest 078\n" RESET);
 	printf("la vraie : %d\n", atoi("078"));
 	printf("     moi : %d\n", ft_atoi("078"));
 
-	// printf(MAGENTA "\nTest aecd123\n" RESET);
-	// printf("la vraie : %d\n", atoi("aecd123"));
-	// printf("     moi : %d\n", ft_atoi("aecd123"));
+	printf(MAGENTA "\nTest aecd123\n" RESET);
+	printf("la vraie : %d\n", atoi("aecd123"));
+	printf("     moi : %d\n", ft_atoi("aecd123"));
 
-	// printf(MAGENTA "\nTest \t\n 123\n" RESET);
-	// printf("la vraie : %d\n", atoi("\t\n 123"));
-	// printf("     moi : %d\n", ft_atoi("\t\n 123"));
+	printf(MAGENTA "\nTest \t\n 123\n" RESET);
+	printf("la vraie : %d\n", atoi("\t\n 123"));
+	printf("     moi : %d\n", ft_atoi("\t\n 123"));
 
-	// printf(MAGENTA "\nTest \t\n +123\n" RESET);
-	// printf("la vraie : %d\n", atoi("\t\n +123"));
-	// printf("     moi : %d\n", ft_atoi("\t\n +123"));
+	printf(MAGENTA "\nTest \t\n +123\n" RESET);
+	printf("la vraie : %d\n", atoi("\t\n +123"));
+	printf("     moi : %d\n", ft_atoi("\t\n +123"));
 
-	// printf(MAGENTA "\nTest \t\n +     123\n" RESET);
-	// printf("la vraie : %d\n", atoi("\t\n +     123"));
-	// printf("     moi : %d\n", ft_atoi("\t\n +     123"));
+	printf(MAGENTA "\nTest \t\n +     123\n" RESET);
+	printf("la vraie : %d\n", atoi("\t\n +     123"));
+	printf("     moi : %d\n", ft_atoi("\t\n +     123"));
 
-	// printf(MAGENTA "Test 25 \t\n\25 -123\n" RESET);
-	// printf("0 : %s\n", "\48");
-	// printf("la vraie : %d\n", atoi("\t\n\25 -123"));
-	// printf("     moi : %d\n", ft_atoi("\t\n\25 -123"));
+	printf(MAGENTA "Test 25 \t\n\25 -123\n" RESET);
+	printf("0 : %s\n", "\48");
+	printf("la vraie : %d\n", atoi("\t\n\25 -123"));
+	printf("     moi : %d\n", ft_atoi("\t\n\25 -123"));
 
-	// printf(MAGENTA "\nTest \t\n -   123\n" RESET);
-	// printf("la vraie : %d\n", atoi("\t\n -   123"));
-	// printf("     moi : %d\n", ft_atoi("\t\n -   123"));
+	printf(MAGENTA "\nTest \t\n -   123\n" RESET);
+	printf("la vraie : %d\n", atoi("\t\n -   123"));
+	printf("     moi : %d\n", ft_atoi("\t\n -   123"));
 
-	// printf(MAGENTA "\nTest qwertyui\n" RESET);
-	// printf("la vraie : %d\n", atoi("qwertyui"));
-	// printf("     moi : %d\n", ft_atoi("qwertyui"));
+	printf(MAGENTA "\nTest qwertyui\n" RESET);
+	printf("la vraie : %d\n", atoi("qwertyui"));
+	printf("     moi : %d\n", ft_atoi("qwertyui"));
 
-	// printf(MAGENTA "\nTest +-156\n" RESET);
-	// printf("la vraie : %d\n", atoi("+-156"));
-	// printf("     moi : %d\n", ft_atoi("+-156"));
+	printf(MAGENTA "\nTest +-156\n" RESET);
+	printf("la vraie : %d\n", atoi("+-156"));
+	printf("     moi : %d\n", ft_atoi("+-156"));
 
-	// printf(MAGENTA "\nTest -+156\n" RESET);
-	// printf("la vraie : %d\n", atoi("-+156"));
-	// printf("     moi : %d\n", ft_atoi("-+156"));
+	printf(MAGENTA "\nTest -+156\n" RESET);
+	printf("la vraie : %d\n", atoi("-+156"));
+	printf("     moi : %d\n", ft_atoi("-+156"));
 
-	// printf(MAGENTA "\nTest ++156\n" RESET);
-	// printf("la vraie : %d\n", atoi("++156"));
-	// printf("     moi : %d\n", ft_atoi("++156"));
+	printf(MAGENTA "\nTest ++156\n" RESET);
+	printf("la vraie : %d\n", atoi("++156"));
+	printf("     moi : %d\n", ft_atoi("++156"));
 
-	// printf(MAGENTA "\nTest -ert156\n" RESET);
-	// printf("la vraie : %d\n", atoi("-ert156"));
-	// printf("     moi : %d\n", ft_atoi("-ert156"));
+	printf(MAGENTA "\nTest -ert156\n" RESET);
+	printf("la vraie : %d\n", atoi("-ert156"));
+	printf("     moi : %d\n", ft_atoi("-ert156"));
 
-	// printf(MAGENTA "\nTest 156ert\n" RESET);
-	// printf("la vraie : %d\n", atoi("156ert"));
-	// printf("     moi : %d\n", ft_atoi("156ert"));
+	printf(MAGENTA "\nTest 156ert\n" RESET);
+	printf("la vraie : %d\n", atoi("156ert"));
+	printf("     moi : %d\n", ft_atoi("156ert"));
 
-	// printf(MAGENTA "\nTest 156ert 156ert\n" RESET);
-	// printf("la vraie : %d\n", atoi("156ert 156ert"));
-	// printf("     moi : %d\n", ft_atoi("156ert 156ert"));
+	printf(MAGENTA "\nTest 156ert 156ert\n" RESET);
+	printf("la vraie : %d\n", atoi("156ert 156ert"));
+	printf("     moi : %d\n", ft_atoi("156ert 156ert"));
 
-	// printf(MAGENTA "\nTest -156ert\n" RESET);
-	// printf("la vraie : %d\n", atoi("-156ert"));
-	// printf("     moi : %d\n", ft_atoi("-156ert"));
+	printf(MAGENTA "\nTest -156ert\n" RESET);
+	printf("la vraie : %d\n", atoi("-156ert"));
+	printf("     moi : %d\n", ft_atoi("-156ert"));
 
-	// printf(MAGENTA "\nTest --156ert\n" RESET);
-	// printf("la vraie : %d\n", atoi("--156ert"));
-	// printf("     moi : %d\n", ft_atoi("--156ert"));
+	printf(MAGENTA "\nTest --156ert\n" RESET);
+	printf("la vraie : %d\n", atoi("--156ert"));
+	printf("     moi : %d\n", ft_atoi("--156ert"));
 
-	// printf(MAGENTA "\nTest int min -2147483648\n" RESET);
-	// printf("la vraie : %d\n", atoi("-2147483648"));
-	// printf("     moi : %d\n", ft_atoi("-2147483648"));
+	printf(MAGENTA "\nTest int min -2147483648\n" RESET);
+	printf("la vraie : %d\n", atoi("-2147483648"));
+	printf("     moi : %d\n", ft_atoi("-2147483648"));
 
-	// printf(MAGENTA "\nTest int max 2147483647\n" RESET);
-	// printf("la vraie : %d\n", atoi("2147483647"));
-	// printf("     moi : %d\n", ft_atoi("2147483647"));
+	printf(MAGENTA "\nTest int max 2147483647\n" RESET);
+	printf("la vraie : %d\n", atoi("2147483647"));
+	printf("     moi : %d\n", ft_atoi("2147483647"));
 
-	// printf(MAGENTA "\nTest 0\n" RESET);
-	// printf("la vraie : %d\n", atoi("0"));
-	// printf("     moi : %d\n", ft_atoi("0"));
+	printf(MAGENTA "\nTest 0\n" RESET);
+	printf("la vraie : %d\n", atoi("0"));
+	printf("     moi : %d\n", ft_atoi("0"));
 
-	// printf(MAGENTA "\nTest overflow 21474836470\n" RESET);
-	// printf("la vraie : %d\n", atoi("21474836470"));
-	// printf("     moi : %d\n", ft_atoi("21474836470"));
+	printf(MAGENTA "\nTest overflow 21474836470\n" RESET);
+	printf("la vraie : %d\n", atoi("21474836470"));
+	printf("     moi : %d\n", ft_atoi("21474836470"));
 
 
 // // FT STRCPY ===================================================================
