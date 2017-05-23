@@ -6,7 +6,7 @@
 #    By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 16:47:23 by sfranc            #+#    #+#              #
-#    Updated: 2017/05/12 11:25:08 by sfranc           ###   ########.fr        #
+#    Updated: 2017/05/22 10:41:30 by sfranc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,20 +110,16 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@ar rc $@ $^
 	@ranlib $@
-	@echo "make $@ : $(GREEN)OK$(RESET)"
 
 $(PATH_OBJS)/%.o: $(PATH_SRCS)/%.c $(INCLUDES)
 	@gcc $(FLAGS) -I $(INCLUDES) -c $< -o $@
-	@echo "compil $@ : $(YELLOW)OK$(RESET)"
 
 
 clean:
 	@rm -f $(OBJS)
-	@echo "$(PATH_OBJS) : $(CYAN)clean$(RESET)"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(NAME) : $(CYAN)clean$(RESET)"
 
 re: fclean all
 
