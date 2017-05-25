@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 17:21:28 by sfranc            #+#    #+#             */
-/*   Updated: 2017/05/25 18:27:43 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/05/25 21:38:18 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,25 @@
 int		ft_atoi_base(char *str, int base)
 {
 	static char	tab[16] = "0123456789ABCDEF";
-	char		*ref;
-	char		*fig;
+	char	*check;
 	long int	nb;
 	int			sign;
 
+	if (base < 2 || base > 16)
+		return (0);
+
 	nb = 0;
 	sign = 1;
-
-	ref = ft_strsub(tab, 0, base);
-	// ft_upcase(str);
-	ft_putendl(ref);
-
 	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
-	if (*str == '-' && base == 10)
+	if (*str == '-')
 		sign = -1;
 	if (*str == '+' || *str == '-')
 		str++;
-	while ((fig = ft_strchr(ref, *str)) && *fig)
+
+	while (*str && (check = ft_strchr(tab, *str)) && *check && check - tab < base)
 	{
-		nb = nb * base + fig - ref;
+		nb = nb * base + check - tab;
 		str++;
 	}
 	return ((int)(nb * sign));
