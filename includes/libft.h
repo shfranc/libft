@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2017/05/12 11:24:44 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/05/25 18:21:25 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
 int				ft_nb_words(char const *s, char c);
 int				ft_isnumber(char *s);
+void			ft_upcase(char *s);
 
 /*
 ** Fontions sur des tableaux de char
@@ -131,6 +132,7 @@ void			ft_lstprint(t_list *list);
 ** Fonctions conversion nombre <-> char
 */
 int				ft_atoi(const char *str);
+int				ft_atoi_base(char *str, int base);
 char			*ft_itoa(int n);
 char			*ft_itoa_base(int value, int base);
 char			*ull_toa(unsigned long long nb);

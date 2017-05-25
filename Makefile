@@ -6,7 +6,7 @@
 #    By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 16:47:23 by sfranc            #+#    #+#              #
-#    Updated: 2017/05/23 10:39:34 by sfranc           ###   ########.fr        #
+#    Updated: 2017/05/25 18:22:11 by sfranc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ PATH_OBJS = objs
 INCLUDES = includes
 SRCS = 	$(addprefix $(PATH_SRCS)/, ft_addtotab.c \
 		ft_atoi.c \
+		ft_atoi_base.c \
 		ft_bzero.c \
 		ft_charswap.c \
 		ft_del.c \
@@ -93,11 +94,12 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_addtotab.c \
 		ft_tabdup.c \
 		ft_tolower.c \
 		ft_toupper.c \
+		ft_upcase.c \
 		get_next_line.c \
 		printbit.c \
 		sort_int_tab.c \
 		ull_len.c \
-		ull_toa.c)
+		ull_toa.c )
 OBJS = $(SRCS:$(PATH_SRCS)/%.c=$(PATH_OBJS)/%.o)
 FLAGS = -Wall -Wextra -Werror
 GREEN = \033[01;32m
