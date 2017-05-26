@@ -6,18 +6,15 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 18:18:43 by sfranc            #+#    #+#             */
-/*   Updated: 2017/05/25 18:53:10 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/05/26 16:54:58 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_upcase(char *s)
+char	ft_upcase(char c)
 {
-	while (*s)
-	{
-		if (ft_isalpha(*s))
-			*s = *s & 0b11011111;
-		s++;
-	}
+	if (ft_isalpha(c))
+		return (c & 0b11011111);
+	return (c);
 }
