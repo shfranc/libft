@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2017/05/29 17:42:50 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/06/28 12:18:58 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,12 +87,12 @@ int				ft_isnumber(char *s);
 /*
 ** Fontions sur des tableaux de char
 */
-char			**ft_tabdup(char **tab);
-void			ft_puttab(char **tab);
-void			ft_freetab(char ***tab);
-int				ft_tablen(char **tab);
-void			ft_addtotab(char ***tab, char *add);
-void			ft_supprtotab(char ***tab, int suppr);
+char			**ft_tabdup(char **array);
+void			ft_puttab(char **array);
+void			ft_freetab(char ***array);
+int				ft_tablen(char **array);
+void			ft_addtotab(char ***array, char *add);
+void			ft_supprtotab(char ***array, int suppr);
 
 /*
 ** Fonctions d'affichage
@@ -142,7 +142,7 @@ char			*ull_toa(unsigned long long nb);
 */
 int				*ft_range(int min, int max);
 int				ft_intsize(int n);
-void			sort_int_tab(int *tab, unsigned int size);
+void			sort_int_tab(int *array, unsigned int size);
 int				ull_len(unsigned long long nb);
 int				ft_abs(int nb);
 
