@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2017/06/28 12:18:58 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/07/17 18:52:17 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ void			ft_supprtotab(char ***array, int suppr);
 ** Fonctions d'affichage
 */
 void			ft_putchar(char c);
+int				ft_intputchar(int c);
 void			ft_putstr(char const *str);
 void			ft_putendl(char const *str);
 void			ft_putnbr(int n);

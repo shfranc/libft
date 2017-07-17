@@ -6,7 +6,7 @@
 #    By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 16:47:23 by sfranc            #+#    #+#              #
-#    Updated: 2017/05/29 17:43:11 by sfranc           ###   ########.fr        #
+#    Updated: 2017/07/17 18:51:55 by sfranc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_abs.c \
 		ft_del.c \
 		ft_exit.c \
 		ft_freetab.c \
+		ft_intputchar.c \
 		ft_intsize.c \
 		ft_isnumber.c \
 		ft_isalnum.c \
