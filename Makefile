@@ -6,7 +6,7 @@
 #    By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 16:47:23 by sfranc            #+#    #+#              #
-#    Updated: 2017/07/21 14:48:31 by sfranc           ###   ########.fr        #
+#    Updated: 2017/08/02 18:29:05 by sfranc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,6 +80,7 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_abs.c \
 		ft_strlen.c \
 		ft_strmap.c \
 		ft_strmapi.c \
+		ft_strmerge.c \
 		ft_strncat.c \
 		ft_strncmp.c \
 		ft_strncpy.c \
