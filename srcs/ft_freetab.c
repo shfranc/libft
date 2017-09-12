@@ -6,7 +6,7 @@
 /*   By: sfranc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/19 15:56:44 by sfranc            #+#    #+#             */
-/*   Updated: 2017/04/24 17:36:20 by sfranc           ###   ########.fr       */
+/*   Updated: 2017/09/12 15:22:47 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_freetab(char ***tab)
 {
 	char **temp;
 
-	if (!tab)
+	if (!tab || !*tab)
 		return ;
 	temp = *tab;
 	while (*temp)
