@@ -92,8 +92,8 @@ char			**ft_tabdup(char **array);
 void			ft_puttab(char **array);
 void			ft_freetab(char ***array);
 int				ft_tablen(char **array);
-void			ft_addtotab(char ***array, char *add);
-void			ft_supprtotab(char ***array, int suppr);
+char			**ft_addtotab(char **array, char *add);
+char			**ft_supprtotab(char **array, int suppr);
 
 /*
 ** Fonctions d'affichage

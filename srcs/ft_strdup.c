@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	char	*temp;
 
 	if (!(s1_dup = (char*)malloc(sizeof(char) * (ft_strlen(s1) + 1))))
-		ft_exit("Unable to malloc", 1);
+		return (NULL);
 	temp = s1_dup;
 	while (*s1)
 	{

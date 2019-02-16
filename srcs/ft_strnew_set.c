@@ -17,7 +17,7 @@ char	*ft_strnew_set(size_t size, char c)
 	char	*str;
 
 	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-		ft_exit("Unable to malloc", 1);
+		return (NULL);
 	*(str + size) = 0;
 	ft_memset(str, c, size);
 	return (str);
