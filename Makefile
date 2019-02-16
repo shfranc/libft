@@ -94,6 +94,8 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_abs.c \
 		ft_strsub.c \
 		ft_strtrim.c \
 		ft_supprtotab.c \
+		ft_swap_int.c \
+		ft_swap_short.c \
 		ft_tablen.c \
 		ft_tabdup.c \
 		ft_tolower.c \
@@ -120,16 +122,14 @@ $(NAME): $(OBJS)
 
 $(PATH_OBJS)/%.o: $(PATH_SRCS)/%.c $(INCLUDES)
 	@gcc $(FLAGS) -I $(INCLUDES) -c $< -o $@
-	@echo "compil $@ : $(YELLOW)OK$(RESET)"
-
 
 clean:
 	@rm -f $(OBJS)
-	@echo "$(PATH_OBJS) : $(CYAN)clean$(RESET)"
+	@echo "libft/$(PATH_OBJS) : $(CYAN)clean$(RESET)"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(NAME) : $(CYAN)clean$(RESET)"
+	@echo "libft/$(NAME) : $(CYAN)clean$(RESET)"
 
 re: fclean all
 

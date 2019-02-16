@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2017/08/02 18:28:37 by sfranc           ###   ########.fr       */
+/*   Updated: 2019/02/16 21:02:07 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # include "color.h"
 
 /*
-** Fonctions sur la memoire
+** MEMORY MANAGEMENT
 */
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
@@ -37,7 +37,7 @@ void			*ft_memalloc(size_t size);
 void			ft_memdel(void **ap);
 
 /*
-** Fonctions sur des caracteres
+** CHAR
 */
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
@@ -50,7 +50,7 @@ int				ft_isspace(int c);
 char			ft_upcase(char c);
 
 /*
-** Fonctions sur des chaines de caracteres
+** STRING
 */
 void			ft_charswap(char **a, char **b);
 size_t			ft_strlen(const char *s);
@@ -86,7 +86,7 @@ int				ft_isnumber(char *s);
 char			*ft_charappend(char *str, char c);
 void			ft_strmerge(char **origin, char *add);
 /*
-** Fontions sur des tableaux de char
+** ARRAY OF STRING
 */
 char			**ft_tabdup(char **array);
 void			ft_puttab(char **array);
@@ -96,7 +96,7 @@ char			**ft_addtotab(char **array, char *add);
 char			**ft_supprtotab(char **array, int suppr);
 
 /*
-** Fonctions d'affichage
+** DISPLAY
 */
 void			ft_putchar(char c);
 int				ft_intputchar(int c);
@@ -110,7 +110,7 @@ void			ft_putnbr_fd(int n, int fd);
 void			ft_putnbr_endl(int n);
 void			printbit(int nb);
 /*
-** Fonctions sur des listes
+** LISTS
 */
 typedef	struct	s_list
 {
@@ -131,7 +131,7 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void			ft_lstprint(t_list *list);
 
 /*
-** Fonctions conversion nombre <-> char
+** CONVERSION NUMBERS <=> STRINGS
 */
 int				ft_atoi(const char *str);
 int				ft_atoi_base(char *str, int base);
@@ -140,16 +140,18 @@ char			*ft_itoa_base(int value, int base);
 char			*ull_toa(unsigned long long nb);
 
 /*
-** Fonctions sur des nombres
+** NUMBERS
 */
 int				*ft_range(int min, int max);
 int				ft_intsize(int n);
 void			sort_int_tab(int *array, unsigned int size);
 int				ull_len(unsigned long long nb);
 int				ft_abs(int nb);
+unsigned int	ft_swap_int(unsigned int n);
+unsigned short	ft_swap_short(unsigned short n);
 
 /*
-** Gestion d'erreur
+** ERROR HANDLING
 */
 void			ft_exit(char *error, int status);
 
