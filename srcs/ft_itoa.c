@@ -20,7 +20,7 @@ char	*ft_itoa(int n)
 
 	size = ft_intsize(n);
 	if (!(s = (char*)malloc(sizeof(char) * (size + 1))))
-		ft_exit("Unable to malloc", 1);
+		return (NULL);
 	*(s + size) = '\0';
 	nb = (long int)n;
 	if (nb == 0)

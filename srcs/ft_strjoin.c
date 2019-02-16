@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (s1 && s2)
 	{
 		if (!(s_new = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
-			ft_exit("Unable to malloc", 1);
+			return (NULL);
 		i = 0;
 		while (*s1)
 			*(s_new + i++) = *s1++;

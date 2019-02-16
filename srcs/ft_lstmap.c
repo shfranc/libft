@@ -20,14 +20,14 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	if (!lst || !f)
 		return (NULL);
 	if (!(new = (t_list*)malloc(sizeof(t_list))))
-		ft_exit("Unable to malloc", 1);
+		return (NULL);
 	new = f(lst);
 	begin = new;
 	lst = lst->next;
 	while (lst)
 	{
 		if (!(new->next = (t_list*)malloc(sizeof(t_list))))
-			ft_exit("Unable to malloc", 1);
+			return (NULL);
 		new->next = f(lst);
 		new = new->next;
 		lst = lst->next;

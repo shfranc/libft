@@ -20,7 +20,7 @@ int		*ft_range(int min, int max)
 	if (max <= min)
 		return (0);
 	if (!(range = (int*)malloc(sizeof(int*) * (max - min + 1))))
-		ft_exit("Unable to malloc", 1);
+		return (NULL);
 	i = 0;
 	while (i < (max - min))
 	{

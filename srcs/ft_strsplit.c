@@ -35,7 +35,7 @@ char		**ft_strsplit(char const *s, char c)
 		return (NULL);
 	n = ft_nb_words(s, c);
 	if (!(tab = (char**)malloc(sizeof(char*) * (n + 1))))
-		ft_exit("Unable to malloc", 1);
+		return (NULL);
 	i = 0;
 	*(tab + n) = 0;
 	while (i < n)

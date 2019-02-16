@@ -20,7 +20,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	if (!s)
 		return (NULL);
 	if (!(new_s = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-		ft_exit("Unable to malloc", 1);
+		return (NULL);
 	i = 0;
 	while (*s)
 		*(new_s + i++) = f(*s++);

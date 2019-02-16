@@ -20,7 +20,7 @@ char	**ft_tabdup(char **tab)
 
 	len = ft_tablen(tab);
 	if (!(cpy = (char**)malloc(sizeof(char*) * (len + 1))))
-		ft_exit("Unable to malloc", 1);
+		return (NULL);
 	*(cpy + len) = 0;
 	i = 0;
 	while (i < len)

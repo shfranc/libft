@@ -20,7 +20,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	if (s)
 	{
 		if (!(new_s = ft_strnew(len)))
-			ft_exit("Unable to malloc", 1);
+			return (NULL);
 		i = 0;
 		while (i < len)
 			*(new_s + i++) = *(s + start++);
