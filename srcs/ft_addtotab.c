@@ -12,28 +12,26 @@
 
 #include "libft.h"
 
-void	ft_addtotab(char ***tab, char *add)
+char	**ft_addtotab(char **tab, char *add)
 {
 	char	**new;
-	char	**old;
 	int		len;
 	int		i;
 
-	if (*tab)
-		len = ft_tablen(*tab) + 1;
+	if (tab)
+		len = ft_tablen(tab) + 1;
 	else
 		len = 1;
 	if (!(new = (char**)malloc(sizeof(char*) * (len + 1))))
-		ft_exit("Unable to malloc", 1);
+		return (NULL);
 	*(new + len) = 0;
 	i = 0;
-	while (*tab && *(*tab + i))
+	while (tab && *(tab + i))
 	{
-		*(new + i) = *(*tab + i);
+		*(new + i) = *(tab + i);
 		i++;
 	}
 	*(new + i) = ft_strdup(add);
-	old = *tab;
-	*tab = new;
-	free(old);
+	free(tab);
+    return (new);
 }
