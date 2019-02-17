@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/11/07 16:47:23 by sfranc            #+#    #+#              #
-#    Updated: 2017/08/02 18:29:05 by sfranc           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libft.a
 PATH_SRCS = srcs
 PATH_OBJS = objs
@@ -57,6 +45,7 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_abs.c \
 		ft_putchar_fd.c \
 		ft_putendl.c \
 		ft_putendl_fd.c \
+        ft_puthexa.c \
 		ft_putnbr.c \
 		ft_putnbr_endl.c \
 		ft_putnbr_fd.c \
@@ -118,10 +107,12 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@ar rc $@ $^
 	@ranlib $@
-	@echo "make $@ : $(GREEN)OK$(RESET)"
+	@printf "make %s: $(GREEN)OK$(RESET)       \n" "$@"
 
 $(PATH_OBJS)/%.o: $(PATH_SRCS)/%.c $(INCLUDES)
+	@mkdir -p $(PATH_OBJS)
 	@gcc $(FLAGS) -I $(INCLUDES) -c $< -o $@
+	@printf "make %s: $(YELLOW)OK$(RESET)       \r" "$@"
 
 clean:
 	@rm -f $(OBJS)

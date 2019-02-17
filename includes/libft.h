@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2019/02/16 21:02:07 by sfranc           ###   ########.fr       */
+/*   Updated: 2019/02/17 18:47:19 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,8 @@ void			ft_putendl_fd(char const *str, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putnbr_endl(int n);
 void			printbit(int nb);
+void            ft_puthexa(unsigned long long n);
+
 /*
 ** LISTS
 */
