@@ -1,6 +1,10 @@
 NAME = libft.a
+FLAGS = -Wall -Wextra -Werror
+CC = gcc
+
 PATH_SRCS = srcs
 PATH_OBJS = objs
+
 INCLUDES = includes
 SRCS = 	$(addprefix $(PATH_SRCS)/, ft_abs.c \
 		ft_addtotab.c \
@@ -96,10 +100,14 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_abs.c \
 		ull_len.c \
 		ull_toa.c )
 OBJS = $(SRCS:$(PATH_SRCS)/%.c=$(PATH_OBJS)/%.o)
-FLAGS = -Wall -Wextra -Werror
+
+RED = \033[01;31m
 GREEN = \033[01;32m
 YELLOW = \033[01;33m
+BLUE = \033[01;34m
+PINK = \033[01;35m
 CYAN = \033[01;36m
+WHITE = \033[01;37m
 RESET = \033[00m
 
 all: $(NAME)
@@ -107,20 +115,20 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@ar rc $@ $^
 	@ranlib $@
-	@printf "make %s: $(GREEN)OK$(RESET)       \n" "$@"
+	@printf "$(GREEN)%s$(RESET): OK             \n" "$@"
 
 $(PATH_OBJS)/%.o: $(PATH_SRCS)/%.c $(INCLUDES)
 	@mkdir -p $(PATH_OBJS)
 	@gcc $(FLAGS) -I $(INCLUDES) -c $< -o $@
-	@printf "make %s: $(YELLOW)OK$(RESET)       \r" "$@"
+	@printf "$(YELLOW)compil:$(RESET) %s        \r" "$@"
 
 clean:
 	@rm -f $(OBJS)
-	@echo "libft/$(PATH_OBJS) : $(CYAN)clean$(RESET)"
+	@echo "$(BLUE)clean:$(RESET) libft/$(PATH_OBJS)"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "libft/$(NAME) : $(CYAN)clean$(RESET)"
+	@echo "$(BLUE)clean:$(RESET) libft/$(NAME)"
 
 re: fclean all
 

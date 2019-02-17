@@ -1,4 +1,5 @@
 libft.a
-objs/*.o
+objs
+*.o
 a.out
 srcs/*.c.swp
