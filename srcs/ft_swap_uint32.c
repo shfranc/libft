@@ -6,13 +6,13 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 21:05:49 by sfranc            #+#    #+#             */
-/*   Updated: 2019/02/16 21:06:08 by sfranc           ###   ########.fr       */
+/*   Updated: 2019/05/23 10:45:34 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int     ft_swap_int(unsigned int n)
+unsigned int     ft_swap_uint32(unsigned int n)
 {
     int     swap;
 

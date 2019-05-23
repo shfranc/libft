@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2019/02/17 18:47:19 by sfranc           ###   ########.fr       */
+/*   Updated: 2019/05/23 10:45:59 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,7 +149,7 @@ int				ft_intsize(int n);
 void			sort_int_tab(int *array, unsigned int size);
 int				ull_len(unsigned long long nb);
 int				ft_abs(int nb);
-unsigned int	ft_swap_int(unsigned int n);
+unsigned int	ft_swap_uint32(unsigned int n);
 unsigned short	ft_swap_short(unsigned short n);
 
 /*

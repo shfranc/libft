@@ -87,7 +87,7 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_abs.c \
 		ft_strsub.c \
 		ft_strtrim.c \
 		ft_supprtotab.c \
-		ft_swap_int.c \
+		ft_swap_uint32.c \
 		ft_swap_short.c \
 		ft_tablen.c \
 		ft_tabdup.c \
