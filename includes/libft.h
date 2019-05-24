@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2019/05/23 10:45:59 by sfranc           ###   ########.fr       */
+/*   Updated: 2019/05/24 14:07:33 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,18 @@
 # include <string.h>
 # include "get_next_line.h"
 # include "color.h"
+
+typedef enum	    		e_ex_ret
+{
+	SUCCESS = EXIT_SUCCESS,
+	FAILURE = EXIT_FAILURE
+}                   		t_ex_ret;
+
+typedef enum				e_bool
+{
+	TRUE = 1,
+	FALSE = 0
+}							t_bool;
 
 /*
 ** MEMORY MANAGEMENT
