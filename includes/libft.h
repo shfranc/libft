@@ -161,7 +161,8 @@ int				ft_intsize(int n);
 void			sort_int_tab(int *array, unsigned int size);
 int				ull_len(unsigned long long nb);
 int				ft_abs(int nb);
-unsigned int	ft_swap_uint32(unsigned int n);
+uint32_t		ft_swap_uint32(uint32_t n);
+uint64_t     	ft_swap_uint64(uint64_t n);
 unsigned short	ft_swap_short(unsigned short n);
 
 /*
