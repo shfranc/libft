@@ -122,6 +122,8 @@ void			ft_putnbr_fd(int n, int fd);
 void			ft_putnbr_endl(int n);
 void			printbit(int nb);
 void            ft_puthexa(unsigned long long n);
+void			ft_puthexa_uint64(uint64_t nbr);
+void			ft_puthexa_uint32(uint32_t nbr);
 
 /*
 ** LISTS

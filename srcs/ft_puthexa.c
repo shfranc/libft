@@ -29,3 +29,39 @@ void	ft_puthexa(unsigned long long nbr)
 	while (i--)
 		ft_putchar(s[i]);
 }
+
+void	ft_puthexa_uint64(uint64_t nbr)
+{
+	const char	hex[16] = "0123456789abcdef";
+	char		s[16];
+	int			i;
+
+	i = 0;
+	ft_memset(s, '0', 16);
+	while (nbr != 0)
+	{
+		s[i++] = hex[nbr % 16];
+		nbr /= 16;
+	}
+	i = 16;
+	while (i--)
+		ft_putchar(s[i]);
+}
+
+void	ft_puthexa_uint32(uint32_t nbr)
+{
+	const char	hex[16] = "0123456789abcdef";
+	char		s[8];
+	int			i;
+
+	i = 0;
+	ft_memset(s, '0', 8);
+	while (nbr != 0)
+	{
+		s[i++] = hex[nbr % 16];
+		nbr /= 16;
+	}
+	i = 8;
+	while (i--)
+		ft_putchar(s[i]);
+}
