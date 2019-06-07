@@ -123,6 +123,8 @@ $(PATH_OBJS)/%.o: $(PATH_SRCS)/%.c $(INCLUDES)
 	@gcc $(FLAGS) -I $(INCLUDES) -c $< -o $@
 	@printf "$(YELLOW)compil:$(RESET) %s        \r" "$@"
 
+norm:
+	@norminette $(PATH_SRCS) $(INCLUDES)
 clean:
 	@rm -f $(OBJS)
 	@echo "$(BLUE)clean:$(RESET) libft/$(PATH_OBJS)"

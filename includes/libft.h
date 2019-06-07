@@ -6,7 +6,7 @@
 /*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:37:22 by sfranc            #+#    #+#             */
-/*   Updated: 2019/05/24 14:07:33 by sfranc           ###   ########.fr       */
+/*   Updated: 2019/06/07 15:53:03 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@
 # include "get_next_line.h"
 # include "color.h"
 
-typedef enum	    		e_ex_ret
+typedef enum				e_ex_ret
 {
 	SUCCESS = EXIT_SUCCESS,
 	FAILURE = EXIT_FAILURE
-}                   		t_ex_ret;
+}							t_ex_ret;
 
 typedef enum				e_bool
 {
@@ -121,7 +121,7 @@ void			ft_putendl_fd(char const *str, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putnbr_endl(int n);
 void			printbit(int nb);
-void            ft_puthexa(unsigned long long n);
+void			ft_puthexa(unsigned long long n);
 void			ft_puthexa_uint64(uint64_t nbr);
 void			ft_puthexa_uint32(uint32_t nbr);
 
@@ -164,7 +164,7 @@ void			sort_int_tab(int *array, unsigned int size);
 int				ull_len(unsigned long long nb);
 int				ft_abs(int nb);
 uint32_t		ft_swap_uint32(uint32_t n);
-uint64_t     	ft_swap_uint64(uint64_t n);
+uint64_t		ft_swap_uint64(uint64_t n);
 unsigned short	ft_swap_short(unsigned short n);
 
 /*

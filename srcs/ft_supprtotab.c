@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_supprtotab.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfranc <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/12 11:22:57 by sfranc            #+#    #+#             */
-/*   Updated: 2017/05/12 11:24:03 by sfranc           ###   ########.fr       */
+/*   Updated: 2019/06/07 15:51:39 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	**ft_supprtotab(char **tab, int suppr)
 	int		len;
 	int		i;
 	int		j;
-    
-    if (tab)
-	    len = ft_tablen(tab) - 1;
-    else
-        return (NULL);
+
+	if (tab)
+		len = ft_tablen(tab) - 1;
+	else
+		return (NULL);
 	if (!(new = (char**)malloc(sizeof(char*) * (len + 1))))
 		return (NULL);
 	*(new + len) = 0;
@@ -36,5 +36,5 @@ char	**ft_supprtotab(char **tab, int suppr)
 			free(*(tab + j++));
 	}
 	free(tab);
-    return (new);
+	return (new);
 }

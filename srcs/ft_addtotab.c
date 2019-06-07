@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_addtotab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfranc <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: sfranc <sfranc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/26 14:57:36 by sfranc            #+#    #+#             */
-/*   Updated: 2017/04/26 14:58:43 by sfranc           ###   ########.fr       */
+/*   Updated: 2019/06/07 15:48:35 by sfranc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ char	**ft_addtotab(char **tab, char *add)
 	}
 	*(new + i) = ft_strdup(add);
 	free(tab);
-    return (new);
+	return (new);
 }
