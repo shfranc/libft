@@ -1,5 +1,12 @@
 NAME = libft.a
-FLAGS = -Wall -Wextra -Werror
+OS = $(shell uname)
+ifeq ($(OS), Darwin)
+	# MacOs
+	FLAGS = -Wall -Wextra -Werror
+else
+	# Linux
+	FLAGS = -Wall -Wextra
+endif
 CC = gcc
 
 PATH_SRCS = srcs
@@ -13,7 +20,6 @@ SRCS = 	$(addprefix $(PATH_SRCS)/, ft_abs.c \
 		ft_bzero.c \
 		ft_charappend.c \
 		ft_charswap.c \
-		ft_del.c \
 		ft_exit.c \
 		ft_freetab.c \
 		ft_intputchar.c \
